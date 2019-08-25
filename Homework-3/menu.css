@@ -1,0 +1,26 @@
+.menu {
+    background: #D5B0AC;
+    color: #402E2A;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+}
+
+span {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+span:hover {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 150px;
+    color: #ffffff;
+    background: #9CD08F;
+    cursor: pointer;
+}
+
