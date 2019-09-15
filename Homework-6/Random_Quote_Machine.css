@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background: #F5F5DC;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    position: absolute;
+    top: 250px;
+    width: 550px;
+    height: 280px;
+    border: outset;
+    background: #fff;
+}
+
+.quote-content{
+    height: 150px;
+    margin: 5px;
+}
+
+.author-content{
+    width: 200px;
+    height: 40px;
+    margin: 5px;
+}
+
+.button-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-button{
+    display: flex;
+}
+
+.logo-button div{
+    margin: 2px;
+}
+
+button> img {
+    height: 30px;
+    width: 30px;
+}
+
+.new-quote-button button{
+    height: 30px;
+    border-radius:5px; 
+    background: #FF7F50;
+    color: #fff;
+}

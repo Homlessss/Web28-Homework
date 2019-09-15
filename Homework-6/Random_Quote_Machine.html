@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+        </script>
+    <link rel="stylesheet" href="./Random_Quote_Machine.css">
+    <title>Random Quote Machine</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="quote-container">
+            <div class="quote-content">
+
+            </div>
+
+            <div class="author-content">
+
+            </div>
+        </div>
+
+        <div class="button-container">
+            <div class="logo-button">
+                <div class="twitter-button">
+                    <a href="https://twitter.com">
+                        <button type="button">
+                            <img src="./twitter.png" alt="">
+                        </button>
+                    </a>
+                </div>
+
+                <div class="faccebook-button">
+                    <a href="https://www.facebook.com/">
+                        <button type="button">
+                            <img src="./facebook.png" alt="">
+                        </button>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="new-quote-button">
+                <button class="quote-button" type="button">
+                    New Quote
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        var btn = $(".quote-button").html;
+        $(".quote-button").click(function () {
+            $.get("https://api.quotable.io/random",
+                function (data, status) {
+                    for (attribute in data) {
+                        let content = data['content'];
+                        let author = data['author'];
+                        var quote = '"' + content + '"';
+                        var auth = '-' + author + '-';
+                        $(".quote-content").html(quote);
+                        $(".author-content").html(auth);
+                    }
+                    if (err) {
+                        alert("ERR!" + status);
+                    }
+                });
+        });
+    </script>
+</body>
+
+</html>
